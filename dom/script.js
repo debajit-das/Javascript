@@ -36,11 +36,46 @@ console.dir(allClass);
 // tagName : returns tag for element nodes
 let first = heading1.tagName;
 console.log(first);
-//    innerText : returns the text content of the element and all its childeren
+// innerText : returns the text content of the element and all its childeren
 let val = document.querySelector("div");
 let test1 = val.innerText; //returns the inner text of div tag
 console.log(test1);
-//    innerHTML : returns the plain text or HTML contents in the elements
+// innerHTML : returns the plain text or HTML contents in the elements
 let test2 = val.innerHTML;
 console.log(test2);
-//    textContent : returns the textual content even for hidden elements
+// textContent : returns the textual content even for hidden elements
+
+// attributes
+// getAttribute(attr) -----to get the attribute value
+let div = document.querySelector("div");
+console.log(div);
+let value = div.getAttribute("id");
+console.log(value);
+// setAttribute(attr,value)---to set the attribute value
+let change = div.setAttribute("id", "myId"); //we can see the new value from element pannel
+console.log(change);
+
+//style
+// node.style
+div.style.backgroundColor = "gray";
+
+// Insert elements :
+// to insert first we have to create a new element
+let newBtn = document.createElement("button");
+console.log(newBtn);
+newBtn.innerText = "Buy Now!";
+// node.append (el);-----ads at the end of the node (inside)
+let section = document.querySelector("section");
+section.append(newBtn);
+
+// node.prepend(el);-----adds at the statrt of the node (inside)
+section.prepend(newBtn);
+
+// node.before(el);-----adds before the node (outside)
+section.before(newBtn);
+
+// node.after(el);-----adds after the node (outside)
+section.after(newBtn);
+
+// Delete element
+// node.remove();-----removes the node
