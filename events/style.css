@@ -1,0 +1,13 @@
+div {
+  height: 100px;
+  width: 100px;
+  background-color: blueviolet;
+}
+.dark {
+  color: white;
+  background-color: black;
+}
+.light {
+  color: black;
+  background-color: white;
+}
