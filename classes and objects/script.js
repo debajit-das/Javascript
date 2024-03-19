@@ -27,7 +27,7 @@ employee1.__proto__ = employees; // Example how to include prottypes in a object
 // but when object & prototype have same method, object's method will be used.
 
 // Classes in JS
-/* Class in a program-code tempalte for creating objects.
+/* Class is a program-code tempalte for creating objects.
 Those objects will have some states (variables) & some behaviours (functions) inside it. */
 class car {
   start() {
@@ -52,3 +52,35 @@ secondCar.setBrand("Jaguar");
 
 // Inheritance in JS
 /* Inheritance is passing down properties & methods from parent Class to child class */
+class parent {
+  hello() {
+    console.log("Hello");
+  }
+}
+class child extends parent {}
+let obj = new child();
+//if child and parent have same method, child's method will be used. [Methd overriding]
+
+// Super Keyword
+/* The super keyword is used to call the constructor of its parent class to access the parent's properties and methods */
+
+class Person {
+  constructor() {
+    this.species = "Homo Sepience";
+  }
+
+  eat() {
+    console.log("Eat");
+  }
+}
+
+class Engineer extends Person {
+  constructor(branch) {
+    super(); //to invoke parent class constructor
+    this.branch = branch;
+  }
+  work() {
+    console.log("Code and develop something");
+  }
+}
+let debajitObj = new Engineer("chemical engineer");
